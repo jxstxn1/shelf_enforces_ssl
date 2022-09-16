@@ -25,7 +25,7 @@ import 'package:shelf_enforces_ssl/shelf_enforces_ssl.dart';
 ```dart
 import 'package:shelf_enforces_ssl/shelf_enforces_ssl.dart';
 
-Handler maxContentLengthValidator(Handler handler) {
+Handler enforceSSL(Handler handler) {
     return handler.use(fromShelfMiddleware(enforceSSL()));
 }
 ```
