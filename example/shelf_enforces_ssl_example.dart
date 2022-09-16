@@ -12,9 +12,6 @@ void main() async {
 
   final server = await shelf_io.serve(handler, 'localhost', 8080);
 
-  // Enable content compression
-  server.autoCompress = true;
-
   print('Serving at https://${server.address.host}:${server.port}');
 }
 

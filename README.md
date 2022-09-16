@@ -23,7 +23,7 @@ import 'package:shelf_enforces_ssl/shelf_enforces_ssl.dart';
 ### As dart_frog middleware
 
 ```dart
-import 'package:content_length_validator/content_length_validator.dart';
+import 'package:shelf_enforces_ssl/shelf_enforces_ssl.dart';
 
 Handler maxContentLengthValidator(Handler handler) {
     return handler.use(fromShelfMiddleware(enforceSSL()));
