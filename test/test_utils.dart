@@ -56,3 +56,6 @@ List<String> methods = [
   'PROPFIND',
   'VIEW',
 ];
+
+int itererateWithoutGET = 1;
+int itererateWithGET = 0;
