@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_print
 
-import 'package:shelf_enforces_ssl/shelf_enforces_ssl.dart';
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
+import 'package:shelf_enforces_ssl/shelf_enforces_ssl.dart';
 
 void main() async {
   final handler = const Pipeline()

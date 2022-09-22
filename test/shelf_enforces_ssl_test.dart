@@ -8,7 +8,7 @@ void main() {
   group('Not Using SSL', () {
     test('GET request results in a Staus Code of 301', () async {
       final handler =
-          Pipeline().addMiddleware(enforceSSL()).addHandler(syncHandler);
+          const Pipeline().addMiddleware(enforceSSL()).addHandler(syncHandler);
       final response =
           await makeRequest(handler, method: 'GET', uri: localhostUri);
       expect(response.statusCode, 301);
@@ -19,13 +19,18 @@ void main() {
       test('${methods.elementAt(i)} request results in a Status Code of 403',
           () async {
         final handler = enforceSSL()(syncHandler);
-        final response = await makeRequest(handler,
-            method: methods.elementAt(i), uri: localhostUri);
+        final response = await makeRequest(
+          handler,
+          method: methods.elementAt(i),
+          uri: localhostUri,
+        );
         expect(response.statusCode, 403);
         expect(
-            response.readAsString(),
-            completion(
-                'Please use HTTPS when submitting data to this server.'));
+          response.readAsString(),
+          completion(
+            'Please use HTTPS when submitting data to this server.',
+          ),
+        );
       });
     }
   });
@@ -35,8 +40,11 @@ void main() {
       test('${methods.elementAt(i)} request results in a Status Code of 200',
           () async {
         final handler = enforceSSL()(syncHandler);
-        final response = await makeRequest(handler,
-            method: methods.elementAt(i), uri: localhostUriWithSSL);
+        final response = await makeRequest(
+          handler,
+          method: methods.elementAt(i),
+          uri: localhostUriWithSSL,
+        );
         expect(response.statusCode, 200);
         expect(response.readAsString(), completion('Hello from /'));
       });
