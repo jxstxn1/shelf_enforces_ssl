@@ -29,3 +29,16 @@ Handler enforceSSL(Handler handler) {
     return handler.use(fromShelfMiddleware(enforceSSL()));
 }
 ```
+
+### Defining custom error response
+
+```dart
+.addMiddleware(
+    enforceSSL(
+      errorResponse: Response(
+        403,
+        body: 'Please use HTTPS when you try to send data to this API',
+      ),
+    ),
+  ),
+```
