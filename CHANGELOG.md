@@ -1,3 +1,7 @@
+## 1.2.0
+
+- Add support for dart >= 3.0.0
+
 ## 1.1.1
 
 - add issue tracker
