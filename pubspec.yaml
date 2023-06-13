@@ -1,16 +1,13 @@
 name: shelf_enforces_ssl
 description: Enforces that users can only make API requests over HTTPS (SSL).
-version: 1.2.0
+version: 1.2.1
 homepage: https://jxstxn.de
 repository: https://github.com/jxstxn1/shelf_enforces_ssl
 issue_tracker: https://github.com/jxstxn1/shelf_enforces_ssl/issues
 
 topics:
   - shelf
-  - security
-  - dart
-  - dart_frog
-  - dartlang
+  - dart-frog
   - middleware
   - ssl
   - https

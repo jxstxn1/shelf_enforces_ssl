@@ -1,3 +1,7 @@
+## 1.2.1
+
+- Replace `_` with `-` in pubpsec
+
 ## 1.2.0
 
 - Add support for dart >= 3.0.0
